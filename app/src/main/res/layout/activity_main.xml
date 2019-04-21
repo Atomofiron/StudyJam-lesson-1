@@ -19,7 +19,8 @@
             android:text="The New York Times"
             android:textColor="@color/colorBlack"
             android:textSize="30sp"
-            app:font="ENGLISHT.TTF" />
+            app:fontName="ENGLISHT.TTF"
+            />
     </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.RecyclerView

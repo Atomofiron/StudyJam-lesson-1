@@ -27,7 +27,7 @@ public class FontTextView extends AppCompatTextView {
 
     public void readAttributes(AttributeSet set) {
         TypedArray ta = getContext().obtainStyledAttributes(set, R.styleable.FontTextView);
-        String font = ta.getString(R.styleable.FontTextView_font);
+        String font = ta.getString(R.styleable.FontTextView_fontName);
         setCustomFont(font);
         ta.recycle();
     }

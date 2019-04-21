@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 
+/*
 def getAppName() {
     try {
         def file = file(new File('src/main/res/values/strings.xml'));
@@ -9,13 +10,14 @@ def getAppName() {
         return "";
     }
 }
+*/
 
 android {
     compileSdkVersion 28
     buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId "ru.webant.studyjam"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.111111beta"
