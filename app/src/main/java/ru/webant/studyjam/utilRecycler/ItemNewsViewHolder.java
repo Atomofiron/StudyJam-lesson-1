@@ -1,6 +1,5 @@
 package ru.webant.studyjam.utilRecycler;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -9,7 +8,6 @@ import com.squareup.picasso.Picasso;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 
 import ru.webant.studyjam.R;
 import ru.webant.studyjam.models.Article;
@@ -20,7 +18,7 @@ import ru.webant.studyjam.models.Multimedia;
  * Created by vdaron on 19.08.17.
  */
 
-public class ItemNewsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class ItemNewsViewHolder extends BaseHolder implements View.OnClickListener {
 
     private TextView titleNews;
     private TextView descriptionNews;

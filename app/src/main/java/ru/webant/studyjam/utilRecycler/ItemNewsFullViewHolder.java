@@ -1,6 +1,5 @@
 package ru.webant.studyjam.utilRecycler;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,7 +18,7 @@ import ru.webant.studyjam.models.Multimedia;
  * Created by vdaron on 19.08.17.
  */
 
-class ItemNewsFullViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+class ItemNewsFullViewHolder extends BaseHolder implements View.OnClickListener {
 
     private TextView titleText;
     private TextView subtitleText;

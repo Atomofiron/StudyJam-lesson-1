@@ -1,28 +1,16 @@
 package ru.webant.studyjam.utilRecycler;
 
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Objects;
 
-import ru.webant.studyjam.R;
 import ru.webant.studyjam.models.Article;
-import ru.webant.studyjam.models.Multimedia;
-import ru.webant.studyjam.models.NewsFormat;
 
-public class MyAdapter extends RecyclerView.Adapter {
+public class MyAdapter extends RecyclerView.Adapter<BaseHolder> {
 
     private ArrayList<Article> listNews;
     private List<Item> items = new ArrayList<>();
@@ -67,7 +55,7 @@ public class MyAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BaseHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return ViewType.values()[viewType].getViewHolder(parent);
     }
 
@@ -77,16 +65,9 @@ public class MyAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(BaseHolder holder, int position) {
         Item item = items.get(position);
-        switch (item.viewType) {
-            case FULL_NEWS:
-                ((ItemNewsFullViewHolder) holder).bind((Article) item.object, listener);
-                break;
-            case NEWS:
-                ((ItemNewsViewHolder) holder).bind((Article) item.object, listener);
-                break;
-        }
+        holder.bind((Article) item.object, listener);
     }
 
     @Override
